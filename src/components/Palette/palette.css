@@ -1,0 +1,22 @@
+/*.palette{*/
+/*    position: absolute;*/
+/*    width: 343px;*/
+/*    height: 500px;*/
+/*    left: 68px;*/
+/*    right: 1003px;*/
+
+/*}*/
+.palette__input-button{
+    position: absolute;
+    width: 343px;
+    height: 50px;
+    left: 6.67%;
+    right: 69.51%;
+    top: 63.05%;
+    bottom: 30.85%;
+    background: #007AFF;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    vertical-align: center;
+}

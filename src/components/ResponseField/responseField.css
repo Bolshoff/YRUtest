@@ -1,0 +1,27 @@
+
+.response-field__wrapper{
+    position: absolute;
+    width: 343px;
+    height: 120px;
+    left: 68px;
+    top: 570px;
+}
+.response-field{
+    position: absolute;
+    width: 343px;
+    height: 120px;
+    left: 0;
+    background: rgba(118, 118, 128, 0.24);
+    border-radius: 10px;
+}
+.response-field__title{
+    position: absolute;
+    margin-top: -25px;
+    left: 20px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+    color: rgba(235, 235, 245, 0.6);
+
+}

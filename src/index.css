@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face {
+  font-family: 'Gotham Pro';
+  src: local('GothamPro'),
+  url('./fonts/GothamPro.woff') format('woff'),
+  url('./fonts/GothamPro.eot') format('eot'),
+  url('./fonts/GothamPro.ttf') format('ttf'),
+  url('./fonts/GothamPro.woff2') format('woff2');
+}
