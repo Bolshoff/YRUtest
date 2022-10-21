@@ -1,16 +1,17 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './navigation.css';
 
 function Navigation() {
   return (
-    <div className="navigation">
-      <a className="navigation__link" href="./somelink.com" target="_blank">
+    <nav className="navigation">
+      <NavLink to="/form" className={({ isActive }) => (isActive ? 'link-active' : 'link')}>
         Форма
-      </a>
-      <a className="navigation__link" href="./somelink.com" target="_blank">
+      </NavLink>
+      <NavLink to="/palette" className={({ isActive }) => (isActive ? 'link-active' : 'link')}>
         Палитра
-      </a>
-    </div>
+      </NavLink>
+    </nav>
   );
 }
 

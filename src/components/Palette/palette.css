@@ -1,11 +1,4 @@
-/*.palette{*/
-/*    position: absolute;*/
-/*    width: 343px;*/
-/*    height: 500px;*/
-/*    left: 68px;*/
-/*    right: 1003px;*/
 
-/*}*/
 .palette__input-button{
     position: absolute;
     width: 343px;
@@ -16,7 +9,12 @@
     bottom: 30.85%;
     background: #007AFF;
     border-radius: 8px;
-    color: white;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -0.408px;
     text-align: center;
     vertical-align: center;
+    cursor: pointer;
 }
