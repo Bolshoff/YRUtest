@@ -4,11 +4,13 @@ import Uploadimage from '../../img/uploadfile.png';
 import ResponseField from '../ResponseField/responseField';
 
 function Form() {
+  const POST_URL = 'https://test-job.pixli.app/send.php';
   const [name, setName] = useState('');
   const [surname, setSurName] = useState('');
   const [patronymic, setPatronymic] = useState('');
   const [selectedImage, setSelectedImage] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
+  const [response, setResponse] = useState({});
 
   useEffect(() => {
     if (selectedImage) {
@@ -16,9 +18,31 @@ function Form() {
     }
   }, [selectedImage]);
 
+  function submitForm(e) {
+    e.preventDefault();
+
+    const data = new FormData();
+    data.set('action', 'send_data');
+    data.set('id', 1);
+    data.set('image', selectedImage);
+    data.set('contact[name]', name);
+    data.set('contact[surname]', surname);
+    data.set('contact[patronymic]', patronymic);
+
+    fetch(POST_URL, {
+      method: 'POST',
+      body: data,
+    })
+      .then((res) => res.json())
+      .then((resp) => {
+        console.log(resp);
+        setResponse(resp);
+      });
+  }
+
   return (
     <div className="form">
-      <form className="form__input">
+      <form className="form__input" onSubmit={submitForm}>
         <label htmlFor="name" className="form__input-label">
           Имя:
           <input
@@ -72,7 +96,7 @@ function Form() {
         </label>
         <input type="submit" className="form__input-submit" value="Сохранить" />
       </form>
-      <ResponseField />
+      <ResponseField msg={response.msg} status={response.status} />
     </div>
   );
 }

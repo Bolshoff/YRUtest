@@ -12,6 +12,7 @@
     height: 120px;
     left: 0;
     background: rgba(118, 118, 128, 0.24);
+    color: #FFFFFF;
     border-radius: 10px;
 }
 .response-field__title{
@@ -24,4 +25,7 @@
     letter-spacing: -0.408px;
     color: rgba(235, 235, 245, 0.6);
 
+}
+.response-field p {
+    margin: 10px;
 }
