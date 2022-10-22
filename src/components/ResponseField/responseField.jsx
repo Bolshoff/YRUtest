@@ -4,7 +4,7 @@ import './responseField.css';
 function ResponseField() {
   return (
     <div className="response-field__wrapper">
-      <h className="response-field__title">Response</h>
+      <p className="response-field__title">Response</p>
       <output className="response-field" name="response" />
     </div>
   );

@@ -1,0 +1,10 @@
+.palette-elements{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-right: 25px;
+    width: 343px;
+    height: 380px;
+    left: 68px;
+}
