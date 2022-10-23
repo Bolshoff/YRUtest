@@ -1,5 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { nanoid } from 'nanoid';
+import { createSlice, nanoid } from '@reduxjs/toolkit';
 
 const initialState = [];
 
@@ -19,10 +18,13 @@ const paletteSlice = createSlice({
         },
       }),
     },
-    changeColor(state, action) {
-      const index = state.findIndex((elem) => elem.id === action.payload);
-      state[index] = action.payload.color;
+    changeColor: {
+      reducer: (state, action) => {
+        const index = state.findIndex((elem) => elem.id === action.payload);
+        state.splice(index, 1, action.payload);
+      },
     },
+    // При нажатии на любой элемент, цвет меняет толко один. Что я делаю не так?
     removeColor(state, action) {
       const index = state.findIndex((elem) => elem.id === action.payload);
       state.splice(index, 1);

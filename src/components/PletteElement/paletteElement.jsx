@@ -4,8 +4,8 @@ import { useDispatch } from 'react-redux';
 
 import { changeColor, removeColor } from '../Palette/paletteSlice';
 
-function PaletteElement({ color, id }) {
-  const [newColor, setNewColor] = useState('#ff9900');
+function PaletteElement({ id }) {
+  const [color, setColor] = useState('#ff9900');
   const dispatch = useDispatch();
 
   const divStile = {
@@ -13,9 +13,11 @@ function PaletteElement({ color, id }) {
     height: '54px',
     width: '54px',
   };
+
   function changeElementColor(e) {
-    setNewColor(e.target.value);
-    dispatch(changeColor(newColor));
+    setColor(e.target.value);
+
+    dispatch(changeColor({ id, color }));
   }
   function deleteColor() {
     dispatch(removeColor(id));
@@ -28,7 +30,7 @@ function PaletteElement({ color, id }) {
           type="color"
           className="palette__element-color"
           name="color"
-          value={newColor}
+          value={color}
           id="palette__element-color"
           onChange={changeElementColor}
         />
