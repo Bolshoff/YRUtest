@@ -91,8 +91,8 @@ function Form() {
               className="form__icon"
               src={imageUrl === null ? Uploadimage : imageUrl}
               alt={setSelectedImage.name}
-              width="60"
-              height="56"
+              width={imageUrl === null ? 60 : 122}
+              height={imageUrl === null ? 56 : 86}
             />
           </span>
         </label>

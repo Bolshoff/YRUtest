@@ -21,11 +21,11 @@ const paletteSlice = createSlice({
     changeColor: {
       reducer: (state, action) => {
         const index = state.findIndex((elem) => elem.id === action.payload);
-        state.splice(index, 1, action.payload.color);
+        state.splice(index, 1, action.payload);
       },
       prepare: (color) => ({
         payload: {
-          // id: nanoid(),
+          // id,
           color,
         },
       }),
