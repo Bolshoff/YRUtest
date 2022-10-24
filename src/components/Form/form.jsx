@@ -36,6 +36,9 @@ function Form() {
       .then((res) => res.json())
       .then((resp) => {
         setResponse(resp);
+      })
+      .catch((err) => {
+        console.log(err);
       });
   }
 
