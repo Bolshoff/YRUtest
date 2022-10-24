@@ -30,7 +30,7 @@ const paletteSlice = createSlice({
         },
       }),
     },
-    // При нажатии на любой элемент, цвет меняет толко один. Что я делаю не так?
+
     removeColor(state, action) {
       const index = state.findIndex((elem) => elem.id === action.payload);
       state.splice(index, 1);
