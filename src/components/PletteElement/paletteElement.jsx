@@ -25,13 +25,13 @@ function PaletteElement({ id }) {
 
   return (
     <div className="palette-element">
-      <label htmlFor="palette__element-color" className="palette__element-label">
+      <label htmlFor={id} className="palette__element-label">
         <input
           type="color"
           className="palette__element-color"
           name="color"
           value={color}
-          id="palette__element-color"
+          id={id}
           onChange={changeElementColor}
         />
         <span className="elem" style={divStile} role="presentation">
